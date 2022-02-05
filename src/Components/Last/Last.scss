@@ -1,0 +1,106 @@
+@import '../../Assets/scss/Mixin.scss';
+@import '../../Assets/scss/Varables.scss';
+// ====== last sityle ====
+.last {
+    text-align: center;
+    margin-bottom: 104px;
+
+    &__section {
+         
+
+        &-title {
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 167.3%;
+            margin-bottom: 11px;
+        }
+
+        &-text {
+            font-size: 15px;
+            line-height: 167.3%;
+            margin-bottom: 61px;
+        }
+
+        &-block {
+            @include flex(center, space-between);
+        }
+
+        &-list {
+            @include flex(center, space-around);
+            flex-wrap: wrap;
+        }
+
+        &-item {
+            margin-bottom: 50px;
+            width: 299px;
+            height: 279px;
+            background: rgba(9, 19, 47, 0.6);
+            border-radius: 20px;
+            padding: 34px 19px 54px 19px;
+        }
+    
+        &-icon {
+            @include flex(center, center);
+            margin: 0 auto;
+            border-radius: 50%;
+            width: 79px;
+            height: 79px;
+            background: rgba(216, 4, 250, 0.4);
+            box-shadow: inset 0px 1px 2px rgba(239, 232, 232, 0.6);
+            backdrop-filter: blur(30px);
+            margin-bottom: 14px;
+            position: relative;
+    
+            i {
+                font-size: 36px;
+            }
+    
+            &-before{
+                position: absolute;
+                width: 33px;
+                height: 33px;
+                z-index: -100;
+                border-radius: 50%;
+                top: 0;
+                left: calc(50% - 33px/2 - 38px);
+                background: linear-gradient(4.19deg, rgba(115, 17, 198, 0.8) -0.98%, rgba(132, 105, 209, 0.8) 89%);
+            }
+    
+            &-after {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                left: calc(50% - 24px/2 + 14.5px);
+                top: 78.76px;
+                border-radius: 50%;
+                top: 50%;
+                z-index: -2;
+                background: #FC4C4F;
+            }
+        }
+
+        &-name {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 140%;
+            margin-bottom: 14px;
+        }
+    
+        &-text {
+            font-size: 14px;
+            line-height: 140%;
+        }
+
+        button {
+            cursor: pointer;
+            transform: translateX(230px);
+            width: 365px;
+            background: linear-gradient(4.19deg, #2C90F7 -17.59%, #05C0CC 115.3%);
+            box-shadow: inset 0px -4px 12px rgba(0, 0, 0, 0.22), inset 0px 1px 2px rgba(239, 232, 232, 0.6);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            border: none;
+            padding: 15px 100px;
+        }
+    }
+}

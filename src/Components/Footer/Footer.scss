@@ -1,0 +1,53 @@
+@import '../../Assets/scss/Varables.scss';
+@import '../../Assets/scss/Mixin.scss';
+// ===== footer =====
+
+.footer {
+    background: #171B2D;
+    padding: 75px 0;
+
+    &__block {
+        @include flex(top, space-between);
+    }
+
+    &__box {
+        width: 235px;
+
+        img {
+            margin-bottom: 5px;
+        }
+
+        &-text {
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+
+    &__content {
+        text-align: right;
+
+        ul{
+            @include flex(center, space-between);
+        }
+
+        li ~ li {
+            margin-left: 40px;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        li.active {
+            .link {
+                color: $blue;
+            }
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            margin-top: 29px;
+        }
+    }
+}

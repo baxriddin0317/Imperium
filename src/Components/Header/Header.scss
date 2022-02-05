@@ -1,0 +1,132 @@
+@import '../../Assets/scss/Mixin.scss';
+@import '../../Assets/scss/Varables.scss';
+
+// <==== headerstyles =====>
+.header {
+    position: sticky;
+    top: 0;
+    height: 70px;
+    padding: 20px 0;
+    z-index: 9999;
+
+    &.scroll{
+        height: 50px;
+        padding: 10px 0;
+        background: rgba(216, 4, 250, 0.04);
+        box-shadow: inset 0px 1px 2px rgba(239, 232, 232, 0.6);
+        backdrop-filter: blur(30px);
+    }
+
+    .container {
+        position: relative;
+        @include flex(center, space-between);
+
+        img {
+            display: inline-block;
+        }
+
+        .open-btn {
+            font-size: 22px;
+            border: none;
+            background: none;
+            @include flex(center, center);
+            display: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 184px;
+            cursor: pointer;
+        }
+
+        .menu{
+            @include flex(center, center);
+
+            .close{
+                display: none;
+                position: absolute;
+                top: 30px;
+                right: 20px;
+                cursor: pointer;
+            }
+
+            ul {
+                @include flex(center, center);
+                margin-right: 26px;
+
+                li ~ li{
+                    margin-left: 6px;
+                }
+
+                li {
+                    padding: 10px;
+                    border-radius: 8px;
+
+                    .link {
+                        font-weight: 500;
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: #FFFFFF;
+                    }
+
+                    &:hover{
+                        background-color: rgba(155, 80, 57, 0.4);
+                    }
+                }
+                li.active {
+                    .link {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+
+    &__btn {
+        padding: 7px 25px;
+        border: none;
+        background: $blue-gradient;
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        color: #FFFFFF;
+        cursor: pointer;
+
+        i {
+            margin-right: 4px;
+        }
+    }
+}
+
+@include breakpoint-down(960px){
+ .header {
+    height: 50px;
+
+    .container {
+        padding: 0 20px;
+
+        .open-btn {
+            display: inline-block;
+        }
+
+        .menu{
+            .close{
+                display: inline-block;
+            }
+            ul{
+                display: none;
+            }
+            ul.active {
+                position: absolute;
+                height: 100vh;
+                flex-direction: column;
+                left: 0;
+                top: -30px;
+                width: 80%;
+                background: rgba(216, 4, 250, 0.04);
+                box-shadow: inset 0px 1px 2px rgba(239, 232, 232, 0.6);
+                backdrop-filter: blur(20px);
+                display: flex;
+            }
+        }
+    }   
+ }
+}

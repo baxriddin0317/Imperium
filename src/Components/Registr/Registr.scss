@@ -1,0 +1,19 @@
+@import '../../Assets/scss/Mixin.scss';
+
+.registr__form {
+    width: 100%;
+}
+
+.registr__btn {
+    width: 100%;
+    height: 56px;
+    background: linear-gradient(4.19deg, #2C90F7 -17.59%, #05C0CC 115.3%);
+    box-shadow: inset 0px -4px 12px rgba(0, 0, 0, 0.22), inset 0px 1px 2px rgba(239, 232, 232, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 167.3%;
+    cursor: pointer;
+}
