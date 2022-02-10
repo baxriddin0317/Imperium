@@ -6,6 +6,16 @@
     justify-content: $justify-content; 
 }
 
+// ===== bfore mixin =====
+@mixin before($widht, $height, $background) {
+  position: absolute;
+  z-index: -2;
+  border-radius: 50%;
+  width: $widht;
+  height: $height;
+  background: $background;
+}
+
 // responsive mixin
 
 @mixin breakpoint-down($site-width) {

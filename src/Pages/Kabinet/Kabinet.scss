@@ -1,0 +1,18 @@
+@import '../../Assets/scss/Mixin.scss';
+
+.kabinet {
+    height: 100%;
+    position: relative;
+    
+    &__block {
+        padding: 0 23px 10px 23px;
+    }
+
+    &__section {
+        display: flex;
+    }
+
+    &__content {
+        width: 100%;
+    }
+}

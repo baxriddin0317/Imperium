@@ -14,15 +14,33 @@ function LoginForm() {
         let getEmail = window.localStorage.getItem("email");
         let getPassword = window.localStorage.getItem("password");
        
-        if(emailRef.current.value === getEmail && passwordRef.current.value === getPassword){
+        let emailVal = emailRef.current.value;
+        let passwordVal = passwordRef.current.value;
+        // ======= input maydonlarini togri kiritish uchun bir qancha shrtlar =======
+        if (emailVal === ""){
+            document.querySelector(".emailError").innerHTML = "Email maydonini to`ldiring";
+        }else if(passwordVal === "") {
+            document.querySelector(".passwordError").innerHTML = "Password maydonini to`ldiring";
+        } 
+        
+        if(emailVal === getEmail && passwordVal === getPassword){
             navigate("/kabinet");
+        }else {
+            document.querySelector(".passwordError").innerHTML = "Siz ro`yhatdan o`tmagansiz !!!";
         }
     }
 
+
   return (
-      <form action="#" className="form">
-          <input type="email" ref={emailRef} placeholder='xoja@gmail.com deb yozasiz' />
-          <input type="password" ref={passwordRef} placeholder='Пароль' />
+      <form className="form" onSubmit={e => e.preventDefault()}>
+          <div className="form__box">
+            <input type="email" ref={emailRef} placeholder='Email' />
+            <small className='error emailError'></small>
+          </div>
+         <div className="form__box">
+            <input type="password" ref={passwordRef} placeholder='Пароль' />
+            <small className='error passwordError'></small>
+         </div>
 
           <div>
               <button onClick={() => hanldeSubmit()}>Войти</button>

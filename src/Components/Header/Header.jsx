@@ -11,15 +11,15 @@ const navDate = [
   },
   {
     name: 'Публичный трейдинг',
-    path: '/about'
+    path: '#about'
   },
   {
     name: 'Доходы и безопасность',
-    path: '/info'
+    path: '#info'
   },
   {
     name: 'Обратная связь',
-    path: '/contact'
+    path: '#contact'
   }
 ]
 
