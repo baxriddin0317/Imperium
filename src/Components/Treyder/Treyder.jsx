@@ -37,6 +37,7 @@ function Treyder() {
                     }else if (val.last_name.toLowerCase().includes(search.toLowerCase())){
                         return val;
                     }
+                    return [];
                 }).map(d => (
                     <tr key={d.id}>
                         <td>
