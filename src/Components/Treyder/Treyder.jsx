@@ -5,7 +5,16 @@ import Data from "../../Assets/Data/tableData.json";
 import { Link } from "react-router-dom";
 
 function Treyder() {
+
     const [ search, setSearch ] = useState("");
+
+    const handleFilter = (val) => {
+        if(search === ""){
+            return val;
+        }else if (val.last_name.toLowerCase().includes(search.toLowerCase())){
+            return val;
+        }
+    }
     
   return (
     <div className='treyder'>
@@ -31,14 +40,7 @@ function Treyder() {
         <div className="tbl-content">
             <table cellPadding={0} cellSpacing={0} border={0}>
             {Data.length > 0 && <tbody>
-                {Data.filter((val) => {
-                    if(search === ""){
-                        return val;
-                    }else if (val.last_name.toLowerCase().includes(search.toLowerCase())){
-                        return val;
-                    }
-                    return [];
-                }).map(d => (
+                {Data.filter((val) => handleFilter(val)).map(d => (
                     <tr key={d.id}>
                         <td>
                             <div>
