@@ -38,9 +38,9 @@ function Header() {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if(document.documentElement.scrollTop > 80){
-        headerRef.current.classList.add("scroll");
+        headerRef.current.className = "header scroll";
       }else {
-        headerRef.current.classList.remove("scroll");
+        headerRef.current.className = "header";
       }
 
       return () => {
