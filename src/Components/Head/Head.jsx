@@ -1,6 +1,7 @@
 import './Head.scss';
 import React, { useState } from 'react';
 import Logo from "../../Assets/Img/logo.png";
+import { Link } from 'react-router-dom';
 
 function Head() {
 
@@ -55,8 +56,10 @@ function Head() {
                     Настройки
                 </li>
                 <li className="head__content-item">
+                    <Link to={"/"}>
                     <i className='bx bx-log-in'></i>
                     Выйти
+                    </Link>
                 </li>
               </ul>
           </div>

@@ -7,6 +7,9 @@ import User from '../../Components/User/User';
 import Modal from '../../Components/Modal/Modal';
 import { useState } from 'react';
 import Treyder from '../../Components/Treyder/Treyder';
+import Batafsil from '../../Components/Batafsil/Batafsil';
+import Statistika from '../../Components/Statistika/Statistika';
+import Instruktor from '../../Components/Instruktor/Instruktor';
 
 function Kabinet() {
     const [ modal, setModal ] = useState(false);
@@ -21,9 +24,9 @@ function Kabinet() {
                     <Routes>
                         <Route path='' element={<User setModal={setModal} />} />
                         <Route path='group' element={<Treyder />} />
-                        <Route path='group/:id' element={<p>salom</p>} />
-                        <Route path='statistika' element={<p>Статистика</p>} />
-                        <Route path='instructions' element={<p>Инструкции</p>} />
+                        <Route path='group/:id' element={<Batafsil />} />
+                        <Route path='statistika' element={<Statistika />} />
+                        <Route path='instructions' element={<Instruktor />} />
                         <Route path='help' element={<p>Помощь</p>} />
                     </Routes>
                 </div>

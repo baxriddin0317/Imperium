@@ -9,7 +9,7 @@
 // ===== bfore mixin =====
 @mixin before($widht, $height, $background) {
   position: absolute;
-  z-index: -2;
+  z-index: -9999;
   border-radius: 50%;
   width: $widht;
   height: $height;

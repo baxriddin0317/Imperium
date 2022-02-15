@@ -1,5 +1,24 @@
 @import '../../Assets/scss/Mixin.scss';
+@import "../../Assets/scss/Mixin.scss";
+.before {
+    &::before {
+        @include before(149px, 149px, linear-gradient(4.19deg, rgba(115, 17, 198, 0.8) -0.98%, rgba(132, 105, 209, 0.8) 89%));
+        display: inline-block;
+        content: '';
+        left: -50px;
+        top: 100px;
+        opacity: 0.5;                                                                                           
+    }
 
+    &::after {
+        @include before(77px, 77px, #FC4C4F);
+        display: inline-block;
+        content: '';
+        left: 50px;
+        top: 70%;
+        opacity: 0.5;   
+    }
+}
 .sidebar {
     background: rgba(80, 110, 131, 0.2);
     box-shadow: inset 0px 1px 2px rgba(239, 232, 232, 0.6);
@@ -11,7 +30,7 @@
 
     &__list{
         @include flex(center, space-between);
-        flex-direction: column;  
+        flex-direction: column; 
     }
 
     &__item {
