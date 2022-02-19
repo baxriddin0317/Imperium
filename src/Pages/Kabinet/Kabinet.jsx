@@ -10,6 +10,7 @@ import Treyder from '../../Components/Treyder/Treyder';
 import Batafsil from '../../Components/Batafsil/Batafsil';
 import Statistika from '../../Components/Statistika/Statistika';
 import Instruktor from '../../Components/Instruktor/Instruktor';
+import Help from '../../Components/Help/Help';
 
 function Kabinet() {
     const [ modal, setModal ] = useState(false);
@@ -27,7 +28,7 @@ function Kabinet() {
                         <Route path='group/:id' element={<Batafsil />} />
                         <Route path='statistika' element={<Statistika />} />
                         <Route path='instructions' element={<Instruktor />} />
-                        <Route path='help' element={<p>Помощь</p>} />
+                        <Route path='help' element={<Help />} />
                     </Routes>
                 </div>
             </div>

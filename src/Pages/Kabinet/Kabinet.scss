@@ -3,6 +3,24 @@
 .kabinet {
     height: 100%;
     position: relative;
+
+    &::before {
+        @include before(106px, 106px, #73BCFF);
+        display: inline-block;
+        content: '';
+        left: 150px;
+        bottom: 80px;
+        opacity: 0.5;
+    }
+
+    &::after {
+        @include before(80px, 80px, #962B45);
+        display: inline-block;
+        content: '';
+        right: 20px;
+        top: 250px;
+        // opacity: 0.5;
+    }
     
     &__block {
         padding: 0 23px 10px 23px;

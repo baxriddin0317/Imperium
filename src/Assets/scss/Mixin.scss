@@ -6,7 +6,7 @@
     justify-content: $justify-content; 
 }
 
-// ===== bfore mixin =====
+// ===== before mixin =====
 @mixin before($widht, $height, $background) {
   position: absolute;
   z-index: -9999;
